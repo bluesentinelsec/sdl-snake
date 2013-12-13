@@ -6,15 +6,16 @@ It's Snake! Made with SDL (and SDL_mixer)! In C!
 Requirements
 ------------
 
-  * make
+  * cmake
   * gcc
-  * SDL 1.2 headers
-  * SDL_mixer 1.2 headers
+  * SDL 1.2
+  * SDL_mixer 1.2
 
 Compilation
 -----------
 
 ```
+cmake CMakeLists.txt
 make
 ```
 
@@ -22,7 +23,7 @@ Running
 -------
 
 ```
-./build/sdl-snake
+./sdl-snake
 ```
 
 Controls

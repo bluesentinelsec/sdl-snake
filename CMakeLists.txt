@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(sdl-snake)
+file(GLOB sources "src/*.c")
+add_executable(sdl-snake ${sources})
+target_link_libraries(sdl-snake SDL SDL_mixer)

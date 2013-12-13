@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "SDL_mixer.h"
+#include "SDL/SDL_mixer.h"
 
 Mix_Chunk *snd_menu_blip;
 Mix_Chunk *snd_menu_select;

@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "SDL.h" // should be included before everything else
+#include "SDL/SDL.h" // should be included before everything else
 #include "deb_mem.h" // includes stdlib.h
 
 #include "sounds.h" // includes SDL_mixer.h

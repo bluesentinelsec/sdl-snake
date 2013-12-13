@@ -3,7 +3,7 @@
  * See: input.h                                                              *
  *****************************************************************************/
 
-#include "SDL.h"
+#include "SDL/SDL.h"
 #include "input.h"
 #include "boolean.h"
 

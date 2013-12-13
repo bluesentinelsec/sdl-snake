@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "SDL.h" // FUCK
+#include "SDL/SDL.h" // FUCK
 
 // make SpriteStrip an opaque type
 struct spritestrip;

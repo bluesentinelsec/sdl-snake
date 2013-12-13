@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 #include "deb_mem.h"
-#include "SDL.h"
+#include "SDL/SDL.h"
 
 #include "sprite_strip.h"
 

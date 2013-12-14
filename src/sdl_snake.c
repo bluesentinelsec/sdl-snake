@@ -14,7 +14,12 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "SDL/SDL.h" // should be included before everything else
+#ifdef _WIN32 // STUPID WINDOWS
+    #include "SDL.h" // should be included before everything else
+#else
+    #include "SDL/SDL.h" // should be included before everything else
+#endif
+
 #include "deb_mem.h" // includes stdlib.h
 
 #include "sounds.h" // includes SDL_mixer.h

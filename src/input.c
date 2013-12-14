@@ -3,7 +3,12 @@
  * See: input.h                                                              *
  *****************************************************************************/
 
-#include "SDL/SDL.h"
+#ifdef _WIN32 // STUPID WINDOWS
+    #include "SDL.h"
+#else
+    #include "SDL/SDL.h"
+#endif
+ 
 #include "input.h"
 #include "boolean.h"
 

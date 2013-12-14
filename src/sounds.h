@@ -6,7 +6,11 @@
 
 #pragma once
 
-#include "SDL/SDL_mixer.h"
+#ifdef _WIN32 // STUPID WINDOWS
+    #include "SDL_mixer.h"
+#else
+    #include "SDL/SDL_mixer.h"
+#endif
 
 Mix_Chunk *snd_menu_blip;
 Mix_Chunk *snd_menu_select;

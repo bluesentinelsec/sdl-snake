@@ -9,7 +9,11 @@
 
 #pragma once
 
-#include "SDL/SDL.h" // FUCK
+#ifdef _WIN32 // STUPID WINDOWS
+    #include "SDL.h" // FUCK
+#else
+    #include "SDL/SDL.h" // FUCK
+#endif
 
 // make SpriteStrip an opaque type
 struct spritestrip;

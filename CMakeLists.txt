@@ -14,29 +14,14 @@ else (SDL_FOUND)
     message(FATAL_ERROR "Finding SDL 1.2 dev libs - NOT FOUND")
 endif (SDL_FOUND)
 
+# NOTE: version 2.8.7 uses SDLMIXER_INCLUDE_DIR and SDLMIXER_LIBRARY
+# NOTE: version 2.8.12 uses SDL_MIXER_INCLUDE_DIRS and SDL_MIXER_LIBRARIES
 message(STATUS "Finding SDL_mixer 1.2 dev libs")
 find_package(SDL_mixer)
 if (SDLMIXER_FOUND)
     message(STATUS "Finding SDL_mixer 1.2 dev libs - found")
-    include_directories(${SDL_MIXER_INCLUDE_DIR})
+    include_directories(${SDLMIXER_INCLUDE_DIR})
     target_link_libraries(sdl-snake ${SDLMIXER_LIBRARY})
 else (SDLMIXER_FOUND)
     message(FATAL_ERROR "Finding SDL_mixer 1.2 dev libs - NOT FOUND")
 endif (SDLMIXER_FOUND)
-
-#message(STATUS "Checking for SDL 1.2")
-#find_library(SDL SDL)
-#if (DEFINED SDL-NOTFOUND)
-#    message(FATAL_ERROR "Checking for SDL 1.2 - COULD NOT FIND")
-#else (DEFINED SDL-NOTFOUND)
-#    message(STATUS "Checking for SDL 1.2 - ${SDL}")   
-#endif (DEFINED SDL-NOTFOUND)
-
-#message(STATUS "Checking for SDL_mixer 1.2")
-##find_library(SDL_mixer SDL_mixer)
-#if (DEFINED SDL_mixer-NOTFOUND)
-#    message(FATAL_ERROR "Checking for SDL_mixer 1.2 - COULD NOT FIND")
-#else (DEFINED SDL_mixer-NOTFOUND)
-#    message(STATUS "Checking for SDL_mixer 1.2 - ${SDL_mixer}")   
-#endif (DEFINED SDL_mixer-NOTFOUND)
-    

@@ -6,7 +6,7 @@ It's Snake! Made with SDL (and SDL_mixer)! In C!
 Requirements
 ------------
 
-  * cmake 2.8+
+  * CMake 2.8+
   * A C compiler
   * SDL 1.2
   * SDL_mixer 1.2
@@ -33,13 +33,22 @@ This is the directory that contains `lib` and `include`.
 SET SDLDIR=<path to SDL directory>
 ```
 
-Then run CMake, then compile whatever spits out.
+Then run CMake. Then compile whatever CMake spits out.
+
+You'll need to copy all the SDL and SDL_mixer DLLs to the EXE directory. Don't
+worry; it will remind you if you haven't when you run the EXE :)
 
 Running
 -------
 
 ```
 ./sdl-snake
+```
+
+or on Windows
+
+```
+sdl-snake.exe
 ```
 
 Controls

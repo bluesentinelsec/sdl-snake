@@ -17,11 +17,21 @@ Compilation (General)
 The general idea is something like this:
 
 ```
-cmake .
+mkdir build
+cd build
+cmake ..
 make
 ```
 
 However, some OSes need a bit of tweaking...
+
+Compilation (OS X)
+------------------
+
+ 1. Copy `SDLMain.m` and `SDLMain.h` from SDL 1.2 OS X distributable to project
+    root (same level as this README).
+ 2. Continue compilation as per the general case above
+
 
 Compilation (Windows)
 ---------------------
@@ -42,13 +52,13 @@ Running
 -------
 
 ```
-./sdl-snake
+./build/sdl-snake
 ```
 
 or on Windows
 
 ```
-sdl-snake.exe
+build\sdl-snake.exe
 ```
 
 Controls

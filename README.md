@@ -77,10 +77,4 @@ Game Notes
 License
 -------
 
-Everything in this project I'ved licensed under the _Do What the Fuck You
-Want to Public License_. You can find it in the `LICENSE` file, or from the
-WTFPL website:
-
-```
-www.wtfpl.net
-```
+MIT; see `LICENSE`

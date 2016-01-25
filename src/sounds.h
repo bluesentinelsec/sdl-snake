@@ -6,7 +6,7 @@
 
 #pragma once
 
-#ifdef _WIN32 // STUPID WINDOWS
+#if defined _WIN32 || defined __APPLE__
     #include "SDL_mixer.h"
 #else
     #include "SDL/SDL_mixer.h"

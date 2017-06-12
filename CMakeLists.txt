@@ -10,7 +10,7 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "It's Snake! Made with SDL (and SDL_mixer)
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libsdl1.2debian (>= 1.2.15), libsdl-mixer1.2 (>= 1.2.12)")
 set(CPACK_DEBIAN_PACKAGE_SECTION "games")
 set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://44d-again-again.itch.io/sdl-snake")
-set(CPACK_DEBIAN_PACKAGE_REPLACES "sdl-snake (< 1.0.0)")
+set(CPACK_DEBIAN_PACKAGE_REPLACES "sdl-snake (<= 1.0.0)")
 INCLUDE(CPack)
 
 find_package(SDL REQUIRED)

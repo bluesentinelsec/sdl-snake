@@ -20,6 +20,10 @@
     #include "SDL/SDL.h" // should be included before everything else
 #endif
 
+#ifndef _WIN32
+    #include <unistd.h>
+#endif
+
 #include "deb_mem.h" // includes stdlib.h
 
 #include "sounds.h" // includes SDL_mixer.h
@@ -258,6 +262,14 @@ static void cleanup (void) {
 ******************************************************************************/
 
 int main (int argc, char **argv) {
+	// HACK! The code expects assets to be relative to the current working
+	// directory but the Debian package puts them elsewhere. Try to change
+	// the working directory in this case so the asset loading code still
+	// works.
+	#ifndef _WI32
+		chdir("/usr/share/sdl-snake");
+	#endif
+
 	SDL_Init (SDL_INIT_EVERYTHING); // check for return value?
 
 	init ();

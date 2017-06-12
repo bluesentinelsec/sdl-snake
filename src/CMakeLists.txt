@@ -34,3 +34,5 @@ target_include_directories(
 	PRIVATE ${SDL_INCLUDE_DIR}
 	PRIVATE ${SDLMIXER_INCLUDE_DIR}
 )
+
+install(TARGETS sdl-snake DESTINATION bin)

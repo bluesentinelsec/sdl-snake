@@ -9,10 +9,10 @@
 
 #pragma once
 
-#ifdef _WIN32 // STUPID WINDOWS
-    #include "SDL.h" // FUCK
+#if defined _WIN32 || defined __APPLE__
+    #include <SDL.h>
 #else
-    #include "SDL/SDL.h" // FUCK
+    #include "SDL/SDL.h"
 #endif
 
 // make SpriteStrip an opaque type
@@ -24,7 +24,7 @@ typedef struct spritestrip * SpriteStrip;
 ******************************************************************************/
 
 /**
- * Make a SpriteStrip on the heap given an image and subimage width. If 
+ * Make a SpriteStrip on the heap given an image and subimage width. If
  * subimage_width is 0 then the image's width is used. Must be freed later on!
  */
 SpriteStrip make_spritestrip (char *file, int subimage_width);

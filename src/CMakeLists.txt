@@ -35,4 +35,6 @@ target_include_directories(
 	PRIVATE ${SDLMIXER_INCLUDE_DIR}
 )
 
-install(TARGETS sdl-snake DESTINATION bin)
+if(CPACK_GENERATOR STREQUAL "DEB")
+	install(TARGETS sdl-snake DESTINATION bin)
+endif()

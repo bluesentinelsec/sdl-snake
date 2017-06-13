@@ -14,10 +14,10 @@
 #include <stdio.h>
 #include <time.h>
 
-#ifdef _WIN32 // STUPID WINDOWS
-    #include "SDL.h" // should be included before everything else
+#if defined _WIN32 || defined __APPLE__
+    #include <SDL.h>
 #else
-    #include "SDL/SDL.h" // should be included before everything else
+    #include "SDL/SDL.h"
 #endif
 
 #ifndef _WIN32

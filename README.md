@@ -50,6 +50,8 @@ build\src\sdl-snake.exe
 
 ## Distributing
 
+### .deb
+
 To create a .deb (assuming you have compiled):
 
 ```
@@ -58,13 +60,23 @@ make package
 
 This will create `build/sdl-snake-X.Y.Z-Linux.deb`.
 
+### .dmg
+
+Assuming you have compiled and are running on macOS:
+
+```
+./package_mac_bundle.sh
+```
+
+This will create `dist-mac/` and turn its contents into `sdl-snake.dmg`
+
 ## Gameplay
 
 ### Controls
 
   * Arrow keys to move
   * Enter key to select
-  
+
 ### Notes
 
   * EASY is the slowest snake; each food gives 1 point

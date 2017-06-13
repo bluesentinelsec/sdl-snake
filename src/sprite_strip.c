@@ -7,8 +7,8 @@
 
 #include "deb_mem.h"
 
-#ifdef _WIN32 // STUPID WINDOWS
-    #include "SDL.h"
+#if defined _WIN32 || defined __APPLE__
+    #include <SDL.h>
 #else
     #include "SDL/SDL.h"
 #endif

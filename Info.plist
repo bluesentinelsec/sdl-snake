@@ -13,6 +13,6 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
 	<key>CFBundleIconFile</key>
-	<string>sdlsnake.icns</string>
+	<string>sdl-snake.icns</string>
 </dict>
 </plist>
